@@ -1,13 +1,31 @@
+// var arr = []
 
 function app(){
-    var mscreen = document.getElementById("screen")
-    var item = document.createElement("li")
+    var mscreen = document.getElementById("screen").value
+    var ol = document.getElementById("ol")
     
-    var li = document.getElementById("list")
+    // arr.push(mscreen)
     
-    var item_list = document.createTextNode(mscreen.value)
-    item.appendChild(item_list)
-    li.appendChild(item)
+    // document.getElementById("ol").innerText = ""
     
-    mscreen.value = ""
-}
+    // for(var i = 0; i < arr.length; i++){
+        var li = document.createElement("li")
+        var list = document.createTextNode(mscreen)
+        li.appendChild(list)
+        ol.appendChild(li)
+
+        // create btn 1
+        var button1 = document.createElement("button")
+        button1.className = "done"
+        li.appendChild(button1)
+
+        button1.onclick = function done(){
+            li.style.textDecoration = "line-through"
+            li.style.opacity = "0.5"
+        }
+
+        // btn 2        
+        var button2 = document.createElement("button")
+        button2.className = "delete"
+        li.appendChild(button2)
+    }

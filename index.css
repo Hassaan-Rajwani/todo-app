@@ -5,7 +5,7 @@ body{
 }
 #main{
     display: flex;
-    text-align: center;
+    /* text-align: center; */
     width: 100%;
     height: 102vh;
     margin: auto;
@@ -30,16 +30,16 @@ h1 {
 input{
     position: relative;
     top: 10px;
-    left: 15px;
+    left: 100px;
     width: 60%;
     height: 5vh;
     font-size: 1.5rem;
     padding-left: 20px;
 }
-button{
+#btn{
     position: relative;
     top: 15px;
-    left: -35px;
+    left: 50px;
     border-radius: 25px;
     background-image: url(./plus.png);
     background-position: center;
@@ -53,12 +53,63 @@ ol{
     font-family: sans-serif;
 }
 li{
-    width: 70%;
+    width: 68%;
     background-color: rgb(207, 207, 207);
     position: relative;
-    left: 55px;
+    left: 59px;
     font-size: 1.5rem;
-    border-bottom: solid 2px;
+    border-bottom: solid 4px rgb(66, 66, 66);
     color: rgb(92, 82, 82);
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+.done{
+    background-image: url(./checked.png);
+    background-position: center;
+    background-size: cover;
+    width: 7.5%;
+    height: 4vh;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    /* margin-left: 20px; */
+}
+.delete{
+    background-image: url(./remove.png);
+    background-position: center;
+    background-size: cover;
+    width: 7.5%;
+    height: 4vh;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 35px;
+    top: 2px;
+    /* margin-left: 5px; */
 }
 
+@media screen and (min-width: 200px) and (max-width:450px) {
+    #box{
+        width: 90%;
+    }
+    input{
+        position: relative;
+        left: 12px;
+        padding-left: 10px;
+        font-size: 1rem;
+    }
+    #btn{
+        width: 9%;
+        border-radius: 50%;
+        position: relative;
+        top: 18px;
+        left: -32px;
+    }
+    ol{
+        position: relative;
+        right: 32px;
+        bottom: 15px;
+    }
+}
